@@ -1,0 +1,20 @@
+{
+  "name": "web-h5",
+  "version": "1.0.0",
+  "description": "组件化形式开发web APP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huruji/web-h5.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huruji/web-h5/issues"
+  },
+  "homepage": "https://github.com/huruji/web-h5#readme"
+}

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="fullpage" type="javaScript">
+    <properties>
+      <option name="frameworkName" value="node_modules" />
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/node_modules/fullpage.js/dist/jquery.fullpage.min.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

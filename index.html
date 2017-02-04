@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .section{
+            padding-top:100px;
+            font-size: 50px;
+            text-align:center;
+            color: #ffffff;
+        }
+
+        /*.section:nth-child(1){*/
+            /*background:#11ee33;*/
+        /*}*/
+        /*.section:nth-child(2){*/
+            /*background:#4444ee;*/
+        /*}*/
+        /*.section:nth-child(3){*/
+            /*background:#4a4a4a;*/
+        /*}*/
+        /*.section:nth-child(4){*/
+            /*background:#ff55ff;*/
+        /*}*/
+    </style>
+</head>
+<body>
+    <div id="fullpage">
+        <div class="section">第一屏</div>
+        <div class="section active">第二屏</div>
+        <div class="section">第三屏</div>
+        <div class="section">第四屏</div>
+    </div>
+</body>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/fullpage.js/dist/jquery.fullpage.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#fullpage').fullpage({
+            scrollingSpeed: 2000,
+            sectionsColor: ['#11ee33','#4444ee','#ff55ff','#4a4a4a'],
+            /*anchors: ['1','2','3','4'],*/
+//            loopTop: true,
+//            loopBottom: true,
+                scrollBar:false,
+                navigation: true,
+                continuousVertical: true
+        }
+        );
+    })
+</script>
+</html>
