@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            background: #000;
+        }
+        .iphone{
+            height:540px;
+            width:340px;
+            background: #ffffff;
+            position:absolute;
+            left:50%;
+            top:50%;
+            margin-top:-270px;
+            margin-left:-170px;
+        }
+        .h5_component_base{
+            transition: all 1s;
+        }
+        /*.h5_component_base_load{
+            opacity:1;
+        }
+        .h5_component_base_leave{
+            opacity: 0;
+        }*/
+    </style>
+    <link rel="stylesheet" href="../css/h5componentbase.css">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../js/h5componentbase.js"></script>
+    <link rel="stylesheet" href="../css/h5componentpoint.css">
+    <script src="../js/h5componentpoint.js"></script>
+</head>
+<body>
+<div class="iphone">
+
+</div>
+<script>
+    var conf = {
+        type: 'point',
+        height:300,
+        width:300,
+        data:[
+            ['A项', .4, 'green'],
+            ['B项', .2, 'yellow', 0, '-120%'],
+            ['C项', .2, 'red', 0, '120%']
+        ],
+        css: {
+            left:50,
+            bottom:0,
+            position: "absolute",
+            opacity:0
+        },
+        center: true,
+        animateIn :{
+            bottom: 200,
+            opacity:1
+        },
+        animateOut: {
+            bottom: 80,
+            opacity:0
+        }
+    };
+    var H5 = new H5ComponentPoint('myname',conf);
+    $('.iphone').append(H5);
+    var load = true;
+    $('body').click(function(){
+        load = !load;
+        $('.h5_component').trigger(load? 'onLeave' : 'onLoad');
+    });
+</script>
+</body>
+</html>
